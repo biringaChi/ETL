@@ -76,6 +76,7 @@ class TransactionType:
 	def get_rows_customerID1(self) -> Dict:
 		# Get rows by customer ID1
 		rows = {}
+		
 		for i in range(len(self.get_customerID().get("customer_ID1"))):
 			rows[f"row{i}"] = self.get_customerID().get("customer_ID1")[i]
 		rows["first_row"] = rows.pop("row0")
